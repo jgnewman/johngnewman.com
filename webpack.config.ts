@@ -1,39 +1,39 @@
-import type { Configuration } from "webpack"
-import path from "path"
-import HtmlWebpackPlugin from "html-webpack-plugin"
-import { getIfUtils, removeEmpty } from "webpack-config-utils"
-import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin"
-import ESLintPlugin from "eslint-webpack-plugin"
-import { CleanWebpackPlugin } from "clean-webpack-plugin"
-import CopyPlugin from "copy-webpack-plugin"
+import type { Configuration } from 'webpack'
+import path from 'path'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import { getIfUtils, removeEmpty } from 'webpack-config-utils'
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
+import ESLintPlugin from 'eslint-webpack-plugin'
+import { CleanWebpackPlugin } from 'clean-webpack-plugin'
+import CopyPlugin from 'copy-webpack-plugin'
 
-const { ifProduction } = getIfUtils(process.env.NODE_ENV ?? "development")
+const { ifProduction } = getIfUtils(process.env.NODE_ENV ?? 'development')
 
 const config: Configuration = {
-  mode: ifProduction("production", "development"),
+  mode: ifProduction('production', 'development'),
   output: ifProduction(
     {
-      path: path.resolve(__dirname, "build"),
-      filename: "[name].[contenthash].js",
-      publicPath: "",
+      path: path.resolve(__dirname, 'build'),
+      filename: '[name].[contenthash].js',
+      publicPath: '',
     },
     {
-      publicPath: "/",
+      publicPath: '/',
     },
   ),
-  entry: "./src/index.tsx",
+  entry: './src/index.tsx',
   module: {
     rules: [
       {
         test: /\.(ts|js)x?$/i,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
             presets: [
-              "@babel/preset-env",
-              "@babel/preset-react",
-              "@babel/preset-typescript",
+              '@babel/preset-env',
+              '@babel/preset-react',
+              '@babel/preset-typescript',
             ],
           },
         },
@@ -41,9 +41,9 @@ const config: Configuration = {
       {
         test: /\.css$/i,
         use: [
-          "style-loader",
+          'style-loader',
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               esModule: true,
               modules: {
@@ -55,36 +55,36 @@ const config: Configuration = {
       },
       {
         test: /\.(svg|png|jpg|jpeg|gif|ico)$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
       },
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: ['.tsx', '.ts', '.js'],
   },
   plugins: removeEmpty([
     ifProduction(new CleanWebpackPlugin()),
     new HtmlWebpackPlugin({
-      template: "src/index.html",
+      template: 'src/index.html',
     }),
     new ForkTsCheckerWebpackPlugin({
       async: false
     }),
     new ESLintPlugin({
-      extensions: ["js", "jsx", "ts", "tsx"],
+      extensions: ['js', 'jsx', 'ts', 'tsx'],
     }),
     new CopyPlugin({
       patterns: [
         {
-          from: "src/static-assets",
-          to: "assets",
+          from: 'src/static-assets',
+          to: 'assets',
         },
       ],
     }),
   ]),
-  devtool: "source-map",
+  devtool: 'source-map',
   devServer: {
-    static: path.join(__dirname, "build"),
+    static: path.join(__dirname, 'build'),
     historyApiFallback: true,
   },
 }
