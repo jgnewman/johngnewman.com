@@ -40,10 +40,21 @@ const config: Configuration = {
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              esModule: true,
+              modules: {
+                namedExport: true,
+              },
+            },
+          },
+        ],
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg|ico)$/i,
+        test: /\.(svg|png|jpg|jpeg|gif|ico)$/i,
         type: "asset/resource",
       },
     ],
