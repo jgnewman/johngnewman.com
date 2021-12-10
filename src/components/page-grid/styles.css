@@ -1,0 +1,11 @@
+.pageGridWrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.pageGrid {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}

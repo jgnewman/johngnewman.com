@@ -2,7 +2,6 @@ import type { Configuration } from 'webpack'
 import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { getIfUtils, removeEmpty } from 'webpack-config-utils'
-import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 import ESLintPlugin from 'eslint-webpack-plugin'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import CopyPlugin from 'copy-webpack-plugin'
@@ -67,9 +66,6 @@ const config: Configuration = {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
     }),
-    new ForkTsCheckerWebpackPlugin({
-      async: false
-    }),
     new ESLintPlugin({
       extensions: ['js', 'jsx', 'ts', 'tsx'],
     }),
@@ -86,6 +82,9 @@ const config: Configuration = {
   devServer: {
     static: path.join(__dirname, 'build'),
     historyApiFallback: true,
+    client: {
+      overlay: false,
+    }
   },
 }
 
