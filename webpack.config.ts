@@ -38,7 +38,7 @@ const config: Configuration = {
         },
       },
       {
-        test: /\.css$/i,
+        test: /\.s?css$/i,
         use: [
           'style-loader',
           {
@@ -50,6 +50,7 @@ const config: Configuration = {
               },
             },
           },
+          'sass-loader',
         ],
       },
       {
@@ -60,6 +61,9 @@ const config: Configuration = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
+    alias: {
+      "@": path.resolve(__dirname, 'src/'),
+    },
   },
   plugins: removeEmpty([
     ifProduction(new CleanWebpackPlugin()),

@@ -3,7 +3,7 @@ import React, { memo } from 'react'
 
 import useGridPosition from './useGridPosition'
 import useRedirect from './useRedirect'
-import { pageGrid, pageGridWrapper } from './styles.css'
+import { pageGrid, pageGridWrapper } from './styles.scss'
 
 const TRANSITION_SPEED = 500
 

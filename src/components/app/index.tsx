@@ -2,22 +2,7 @@ import React, { useMemo } from 'react'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import PageGrid from '@/components/page-grid'
-
-interface PageProps {
-  color: string
-}
-
-const Page = ({ color }: PageProps) => {
-  return (
-    <div style={{
-      background: color,
-      width: '100vw',
-      height: '100vh',
-      overflowY: 'auto',
-      flexShrink: 0,
-    }}></div>
-  )
-}
+import Page from '@/components/page'
 
 const useGridLayout = () => {
   return useMemo(() => {
@@ -65,7 +50,9 @@ const App = () => {
 
   return (
     <>
+      <Header />
       <PageGrid grid={gridLayout} />
+      <Footer />
     </>
   )
 }

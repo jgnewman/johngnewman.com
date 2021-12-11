@@ -1,0 +1,24 @@
+@import '@/globals';
+
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  background: $body-color;
+  color: $copy-color;
+  font-family: $body-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $headline-color;
+  font-family: $headline-font;
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}

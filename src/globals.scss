@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&family=Source+Serif+Pro&display=swap');
+
+$body-color: #F2F2F2;
+$copy-color: #535C76;
+$headline-color: #000000;
+$icon-color: #000000;
+
+$body-font: 'Open Sans', sans-serif;
+$headline-font: 'Source Serif Pro', serif;
+
+$base-font-size: 16px;
+
+$header-height: 20vh;
+$footer-height: 20vh;
+$content-height: 60vh;
+
+:export {
+  baseFontSize: $base-font-size;
+  bodyColor: $body-color;
+  bodyFont: $body-font;
+  contentHeight: $content-height;
+  copyColor: $copy-color;
+  footerHeight: $footer-height;
+  headerHeight: $header-height;
+  headlineColor: $headline-color;
+  headlineFont: $headline-font;
+  iconColor: $icon-color;
+}
+
+@mixin midsize {
+  @media (min-width: 48em) {
+    @content;
+  }
+}
+
+@mixin largesize {
+  @media (min-width: 62em) {
+    @content;
+  }
+}
+
+@mixin xlsize {
+  @media (min-width: 75em) {
+    @content;
+  }
+}

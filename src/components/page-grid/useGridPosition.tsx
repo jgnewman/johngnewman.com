@@ -1,21 +1,22 @@
 import {
   Grid,
   GridPosition,
-  RouteMap,
   MapNode,
   GridNode,
   GridRow,
 } from './types'
 
-import React, { useMemo } from 'react'
+import React, { FC, useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
 
+const UIWrapper: FC = ({ children }) => {
+  return <>{ children }</>
+}
 
 const useGridPosition = (grid: Grid): GridPosition => {
   const { pathname } = useLocation()
 
   const result = useMemo(() => {
-    const routeMap: RouteMap = {}
     const nodes: JSX.Element[] = []
     const rows = grid.length
     let columns = 0
@@ -32,8 +33,7 @@ const useGridPosition = (grid: Grid): GridPosition => {
         const y = !rowIndex ? '0' : `-${rowIndex * 100}vh`
         const node = { ui, route, title, x, y }
 
-        routeMap[route] = node
-        nodes.push(<div key={route}>{ui}</div>)
+        nodes.push(<UIWrapper key={route}>{ui}</UIWrapper>)
 
         if (route === pathname) {
           const curRow = grid[rowIndex]
@@ -59,7 +59,6 @@ const useGridPosition = (grid: Grid): GridPosition => {
     }
 
     return {
-      routeMap,
       nodes,
       rows,
       columns,

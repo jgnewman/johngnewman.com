@@ -7,7 +7,7 @@ import { store } from '@/redux/store'
 import App from '@/components/app'
 
 import 'normalize.css'
-import './styles.css'
+import './index.scss'
 
 ReactDOM.render(
   <React.StrictMode>
