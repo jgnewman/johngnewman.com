@@ -3,9 +3,13 @@ import React, { memo } from 'react'
 import { iconColor } from '@/globals.scss'
 import { menuIcon } from './styles.scss'
 
-const MenuIcon = memo(() => {
+export interface MenuButtonProps {
+  onClick: () => void
+}
+
+const MenuButton = memo(({ onClick }: MenuButtonProps) => {
   return (
-    <button>
+    <button aria-hidden onClick={onClick}>
       <svg className={menuIcon} width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fillRule="evenodd" clipRule="evenodd" d="M0 3H2V25H0V3Z" fill={iconColor} />
         <path fillRule="evenodd" clipRule="evenodd" d="M6 0H8V22H6V0Z" fill={iconColor} />
@@ -15,4 +19,4 @@ const MenuIcon = memo(() => {
   )
 })
 
-export default MenuIcon
+export default MenuButton

@@ -1,0 +1,41 @@
+@import '@/globals';
+
+.menuItem {
+  display: block;
+}
+
+.menuLink {
+  position: relative;
+  display: block;
+  font-size: $label-font-size;
+  font-family: $label-font;
+  color: $label-color;
+  padding: 0.3em 1.5em;
+  transition: background-color .3s ease;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: transparent;
+  }
+
+  &:hover {
+    background: rgba($box-highlight-primary, 0.4);
+  }
+
+}
+
+.active,
+.active:hover {
+  cursor: default;
+  background: $box-highlight-primary;
+
+  &::after {
+    background-color: $graphic-color;
+  }
+}

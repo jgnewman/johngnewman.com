@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&family=Source+Serif+Pro&display=swap');
 
-$body-color: #F2F2F2;
+$body-color: #E5E3DF;
+$menu-color: #F4F3F1;
+$box-color: #D8D8D8;
+$box-highlight-primary: #D0D4E0;
+$box-highlight-secondary: #E6CFD2;
+$link-underline-color: #2A5AEA;
+$link-underline-color-hover: #EA2A61;
+$graphic-color: #4C5980;
 $copy-color: #535C76;
 $headline-color: #000000;
 $label-color: #000000;
@@ -18,13 +25,19 @@ $header-height: 20vh;
 $footer-height: 20vh;
 $content-height: 60vh;
 
+$base-shadow: 0 2px 33px rgba(0, 0, 0, .15);
+
 :export {
   baseFontSize: $base-font-size;
   bodyColor: $body-color;
   bodyFont: $body-font;
+  boxColor: $box-color;
+  boxHighlightPrimary: $box-highlight-primary;
+  boxHighlightSecondary: $box-highlight-secondary;
   contentHeight: $content-height;
   copyColor: $copy-color;
   footerHeight: $footer-height;
+  graphicColor: $graphic-color;
   headerHeight: $header-height;
   headlineColor: $headline-color;
   headlineFont: $headline-font;
@@ -32,6 +45,10 @@ $content-height: 60vh;
   labelColor: $label-color;
   labelFont: $label-font;
   labelFontSize: $label-font-size;
+  linkUnderlineColor: $link-underline-color;
+  linkUnderlineColorHover: $link-underline-color-hover;
+  menuColor: $menu-color;
+  baseShadow: $base-shadow;
   smallFontSize: $small-font-size;
 }
 

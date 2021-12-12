@@ -1,5 +1,53 @@
+@import '@/globals';
+
 .menuWrapper {
   position: absolute;
   top: 25%;
   right: 5vw;
+}
+
+.menuDropdownWrapper {
+  display: none;
+  position: absolute;
+  top: 44px;
+  right: 0;
+  text-align: right;
+  padding: 0 0.5em;
+}
+
+@keyframes openMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.opened {
+  display: block;
+  animation-name: openMenu;
+  animation-duration: .3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+.menuTriangle {
+  display: block;
+  margin: 0 3px 0 auto;
+}
+
+.menuLinkList {
+  text-align: left;
+  list-style: none;
+  margin: 0;
+  padding: 1em 0;
+  background: $menu-color;
+  box-shadow: $base-shadow;
+
+  display: flex;
+  flex-direction: column;
+  width: 14rem;
 }
