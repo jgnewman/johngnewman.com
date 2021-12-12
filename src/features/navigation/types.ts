@@ -1,9 +1,10 @@
-export interface NavigationState {
-  x: number
-  y: number
+export interface MenuLink {
+  title: string
+  route: string
 }
 
-export interface SetPositionPayload {
-  x: number,
-  y: number,
+export interface NavigationState {
+  menuItems: MenuLink[]
 }
+
+export type SetMenuPayload = MenuLink[]

@@ -1,13 +1,13 @@
 import React from 'react'
-import MenuIcon from '@/components/menu-icon'
+import MenuButton from '@/components/menu-button'
 
-import { menuButton } from './styles.scss'
+import { menuWrapper } from './styles.scss'
 
 const Menu = () => {
   return (
-    <button className={menuButton}>
-      <MenuIcon />
-    </button>
+    <div className={menuWrapper}>
+      <MenuButton />
+    </div>
   )
 }
 

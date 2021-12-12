@@ -4,21 +4,17 @@ export interface GridNode {
   title: string
 }
 
-export interface MapNode {
-  ui: JSX.Element,
-  title: string,
-  route: string,
+export interface GridDimensions {
+  rows: number
+  columns: number
+}
+
+export interface GridPosition {
   x: string
   y: string
 }
 
-export interface GridPosition {
-  nodes: JSX.Element[]
-  rows: number
-  columns: number
-  currentNode: MapNode
-  nextNode: GridNode | null
-  prevNode: GridNode | null
+export interface GridData extends GridPosition {
   shouldRedirect: boolean
 }
 
