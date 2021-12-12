@@ -1,0 +1,99 @@
+@import '@/globals';
+
+.footerWrapper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+  box-sizing: border-box;
+
+  height: $footer-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5vw;
+
+  background: $body-color;
+}
+
+.copyright {
+  font-size: $small-font-size;
+  text-align: center;
+  width: 50%;
+  line-height: 1.6;
+}
+
+.linkWrapper {
+  width: 25%;
+  img {
+    padding-left: .75em;
+  }
+}
+
+.prevLinkWrapper {
+  text-align: left;
+}
+
+.nextLinkWrapper {
+  text-align: right;
+}
+
+.navLink {
+  color: $label-color;
+  font-size: $label-font-size;
+  font-family: $label-font;
+
+  display: inline-flex;
+  align-items: center;
+
+  span {
+    display: none;
+    @include midsize {
+      display: block;
+    }
+  }
+
+  img {
+    transition: all .3s ease;
+  }
+}
+
+.prevLink {
+  justify-content: start;
+
+  img {
+    transform: rotate(180deg);
+  }
+
+  &:hover img {
+    transform: rotate(180deg) translateX(25%);
+  }
+}
+
+@keyframes bounceNext {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(25%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.nextLink {
+  justify-content: end;
+
+  img {
+    animation-name: bounceNext;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  &:hover img {
+    animation: none;
+    transform: translateX(25%);
+  }
+}
