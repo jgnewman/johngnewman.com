@@ -1,19 +1,14 @@
 @import '@/globals';
 
 .headerWrapper {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
+  position: relative;
   z-index: 2;
-  box-sizing: border-box;
 
+  box-sizing: border-box;
   height: $header-height;
-  padding: 1rem 0 1rem 5vw;
+  padding: 1rem 0 1rem $common-margin;
   display: flex;
   align-items: center;
-
-  background: $body-color;
 
   @include largesize {
     justify-content: center;
@@ -23,6 +18,8 @@
 
 .logoLink {
   max-width: 50%;
+  max-height: 100%;
+  display: block;
 }
 
 .logo {

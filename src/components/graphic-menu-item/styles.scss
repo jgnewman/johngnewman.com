@@ -1,0 +1,66 @@
+@import '@/globals';
+
+$item-height: calc($content-height - ($content-height * .2));
+
+.listItem {
+  display: flex;
+  height: $content-height * .7;
+  position: relative;
+  width: 20%;
+
+  &:nth-child(2) {
+    transform: translateY(-10%);
+  }
+
+  &:nth-child(4) {
+    transform: translateY(10%);
+  }
+}
+
+.listItemLink {
+  margin-right: 2.5em;
+  width: 100%;
+  box-shadow: 0 0 0 transparent;
+  transition: all .3s ease;
+  opacity: 0.2;
+
+  &:hover {
+    box-shadow: $base-shadow;
+    opacity: 1;
+
+    & div {
+      filter: none;
+      transform: scale(1.05);
+    }
+  }
+}
+
+.listItemLabel {
+  font-size: $label-font-size;
+  color: $label-color;
+  font-family: $label-font;
+  display: block;
+  width: 1.66em;
+
+  position: absolute;
+  left: -1.75em;
+  top: 0;
+  height: 100%;
+}
+
+.listItemLabelText {
+  display: block;
+  transform: rotate(-90deg) translate(-100%, 0);
+  transform-origin: top left;
+  width: $item-height;
+  text-align: right;
+}
+
+.listItemImg {
+  transition: all .3s ease;
+  height: 100%;
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  filter: grayscale(100%) contrast(50%);
+}

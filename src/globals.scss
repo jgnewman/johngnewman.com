@@ -21,19 +21,27 @@ $base-font-size: 16px;
 $small-font-size: 81.25%; // 13px
 $label-font-size: 87.5%; // 14px
 
-$header-height: 20vh;
-$footer-height: 20vh;
-$content-height: 60vh;
+$header-height: 16vh;
+$footer-height: 12vh;
+$content-height: 72vh;
+$common-margin: 5vw;
 
 $base-shadow: 0 2px 33px rgba(0, 0, 0, .15);
+$large-rounding: 49px;
+
+$midsize: 48em;
+$largesize: 62em;
+$xlsize: 75em;
 
 :export {
   baseFontSize: $base-font-size;
+  baseShadow: $base-shadow;
   bodyColor: $body-color;
   bodyFont: $body-font;
   boxColor: $box-color;
   boxHighlightPrimary: $box-highlight-primary;
   boxHighlightSecondary: $box-highlight-secondary;
+  commonMargin: $common-margin;
   contentHeight: $content-height;
   copyColor: $copy-color;
   footerHeight: $footer-height;
@@ -45,27 +53,30 @@ $base-shadow: 0 2px 33px rgba(0, 0, 0, .15);
   labelColor: $label-color;
   labelFont: $label-font;
   labelFontSize: $label-font-size;
+  largeRounding: $large-rounding;
+  largesize: $largesize;
   linkUnderlineColor: $link-underline-color;
   linkUnderlineColorHover: $link-underline-color-hover;
   menuColor: $menu-color;
-  baseShadow: $base-shadow;
+  midsize: $midsize;
   smallFontSize: $small-font-size;
+  xlsize: $xlsize;
 }
 
 @mixin midsize {
-  @media (min-width: 48em) {
+  @media (min-width: $midsize) {
     @content;
   }
 }
 
 @mixin largesize {
-  @media (min-width: 62em) {
+  @media (min-width: $largesize) {
     @content;
   }
 }
 
 @mixin xlsize {
-  @media (min-width: 75em) {
+  @media (min-width: $xlsize) {
     @content;
   }
 }

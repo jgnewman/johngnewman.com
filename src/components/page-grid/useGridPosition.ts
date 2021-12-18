@@ -21,7 +21,7 @@ const useGridPosition = (grid: Grid): GridData => {
         if (route === pathname) {
           currentPos = {
             x: !nodeIndex ? '0' : `-${nodeIndex * 100}vw`,
-            y: !rowIndex ? '0' : `-${rowIndex * 100}vh`,
+            y: !rowIndex ? '0' : `-${(rowIndex * 100) / grid.length}%`,
           }
         }
       })

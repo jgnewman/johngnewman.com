@@ -1,12 +1,13 @@
 import React, { memo, useRef } from 'react'
+import { useSelector } from 'react-redux'
 import cx from 'classnames'
 
 import triangleUrl from '@/images/menu-triangle.svg'
+import { getFilteredMenuItems } from '@/features/navigation/selectors'
 import MenuButton from '@/components/menu-button'
 import MenuItem from '@/components/menu-item'
 
 import useDocumentClickHandler from './useDocumentClickHandler'
-import useFilteredMenuItems from './useFilteredMenuItems'
 import useMenuControls from './useMenuControls'
 
 import {
@@ -19,7 +20,7 @@ import {
 
 const Menu = memo(() => {
   const menuRef = useRef<HTMLDivElement>(null)
-  const menuItems = useFilteredMenuItems()
+  const menuItems = useSelector(getFilteredMenuItems)
   const { isOpen, closeMenu, toggleMenu } = useMenuControls()
 
   useDocumentClickHandler({ closeMenu, menuRef })

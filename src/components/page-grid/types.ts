@@ -2,6 +2,7 @@ export interface GridNode {
   ui: JSX.Element
   route: string
   title: string
+  navImg: string | null
 }
 
 export interface GridDimensions {

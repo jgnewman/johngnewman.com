@@ -1,0 +1,26 @@
+@import '@/globals';
+
+.highlight {
+  display: inline-block;
+  position: relative;
+  color: $label-color;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: .2em;
+    top: 45%;
+    height: 50%;
+    width: 99%;
+    z-index: -1;
+  }
+}
+
+.primary::before {
+  background: $box-highlight-primary;
+}
+
+.secondary::before {
+  background: $box-highlight-secondary;
+}

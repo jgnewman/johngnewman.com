@@ -1,6 +1,8 @@
+@import '@/globals';
+
 .pageGridWrapper {
   width: 100vw;
-  height: 100vh;
+  height: $content-height;
   overflow: hidden;
 }
 

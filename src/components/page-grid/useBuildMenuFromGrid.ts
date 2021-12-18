@@ -14,8 +14,8 @@ const useBuildMenuFromGrid = (grid: Grid) => {
   useEffect(() => {
     if (!hasMenu) {
       const newMenuItems: MenuLink[] = []
-      grid.forEach((row: GridRow) => row.forEach(({ route, title }: GridNode) => {
-        newMenuItems.push({ route, title })
+      grid.forEach((row: GridRow) => row.forEach(({ route, title, navImg }: GridNode) => {
+        newMenuItems.push({ route, title, navImg })
       }))
       dispatch(setMenuItems(newMenuItems))
     }

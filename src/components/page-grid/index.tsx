@@ -6,6 +6,8 @@ import useGridChildren from './useGridChildren'
 import useGridDimensions from './useGridDimensions'
 import useGridPosition from './useGridPosition'
 import useRedirect from './useRedirect'
+
+import { contentHeight } from '@/globals.scss'
 import { pageGrid, pageGridWrapper } from './styles.scss'
 
 const TRANSITION_SPEED = 500
@@ -22,7 +24,7 @@ const PageGrid = memo(({ grid }: PageGridProps) => {
     <div className={pageGridWrapper}>
       <div className={pageGrid} style={{
         width: `calc(100vw * ${columns})`,
-        height: `calc(100vh * ${rows})`,
+        height: `calc(${contentHeight} * ${rows})`,
         transform: `translate(${x}, ${y})`,
         transition: `all ${TRANSITION_SPEED / 1000}s ease`,
       }}>

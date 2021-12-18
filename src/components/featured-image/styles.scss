@@ -1,0 +1,29 @@
+@import '@/globals';
+
+.featuredImageWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.featuredImageInner {
+  position: relative;
+}
+
+.featuredImage {
+  display: block;
+  max-width: 100%;
+  max-height: $content-height;
+  border-radius: 0 0 $large-rounding 0;
+
+  @include xlsize {
+    max-height: calc($content-height - 4rem);
+  }
+}
+
+.brandMark {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  max-width: 25%;
+}

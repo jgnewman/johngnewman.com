@@ -1,0 +1,14 @@
+@import '@/globals';
+
+.textGrid {
+  margin-top: 1.5em;
+
+  @include midsize {
+    column-count: 3;
+    column-width: 28%;
+  }
+
+  p:first-child {
+    margin-top: 0;
+  }
+}
