@@ -1,7 +1,7 @@
 @import '@/globals';
 
 .repoLinkWrapper {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .repoLink {
@@ -10,9 +10,13 @@
   height: 100%;
   background: $box-color;
   transition: all .3s ease;
+  border: 2px solid $body-color;
 
   &:hover {
     background: $box-highlight-primary;
+    box-shadow: $base-shadow;
+    border-color: $graphic-color;
+    transform: scale(1.05);
   }
 }
 

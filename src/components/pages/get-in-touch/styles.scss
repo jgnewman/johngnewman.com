@@ -1,6 +1,44 @@
 @import '@/globals';
 
+.textCell {
+  min-height: 100%;
+  position: relative;
+}
+
 .asterisk {
   font-weight: 700;
   color: $label-color;
+}
+
+.emailBtn {
+  @extend .labelStyle;
+  margin-top: 2rem;
+
+  background: $box-color;
+  padding: 0.75rem 2rem 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  border: 2px solid $body-color;
+  transition: all .3s ease;
+
+  &:hover {
+    border-color: $graphic-color;
+    background: $box-highlight-primary;
+    box-shadow: $base-shadow;
+  }
+
+  img {
+    margin-right: 1rem;
+  }
+}
+
+.footNote {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: $small-font-size;
+
+  .asterisk {
+    margin-right: 0.25em;
+  }
 }
