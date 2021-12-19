@@ -7,13 +7,11 @@ import navWhatIDo from '@/images/nav-what-i-do.jpg'
 import navThingsILove from '@/images/nav-things-i-love.jpg'
 import navGetInTouch from '@/images/nav-get-in-touch.jpg'
 
-import PageWrapper from '@/components/pages/page-wrapper'
-
 import Home from '@/components/pages/home'
 import WhoIAm from '@/components/pages/who-i-am'
 import WhereIveBeen from '@/components/pages/where-ive-been'
 import WhatIDo from '@/components/pages/what-i-do'
-
+import ThingsILove from '@/components/pages/things-i-love'
 import GetInTouch from '@/components/pages/get-in-touch'
 
 const useAppPages = (): Grid => {
@@ -50,7 +48,7 @@ const useAppPages = (): Grid => {
           route: '/things-i-love',
           title: 'Things I love',
           navImg: navThingsILove,
-          ui: <PageWrapper color="blue" columns={1} />,
+          ui: <ThingsILove />,
         },
         {
           route: '/get-in-touch',

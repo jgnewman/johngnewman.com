@@ -10,18 +10,16 @@ import {
 
 interface PageProps {
   alignItems?: 'start' | 'end' | 'center'
-  color?: string
   columns: 1 | 2
 }
 
 const PageWrapper: FC<PageProps> = ({
   alignItems = 'start',
-  color,
   columns,
   children,
 }) => {
   return (
-    <section className={pageWrapper} style={{ background: color || 'transparent' }}>
+    <section className={pageWrapper}>
       <div
         className={cx(pageConstraint, {
           [oneCol]: columns === 1,
