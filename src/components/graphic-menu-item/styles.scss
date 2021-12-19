@@ -25,10 +25,9 @@ $item-height: calc($content-height - ($content-height * .2));
   opacity: 0.2;
 
   &:hover,
-  &:focus {
+  &.attention {
     box-shadow: $base-shadow;
     opacity: 1;
-    outline: 0 transparent;
 
     & div {
       filter: none;
@@ -36,15 +35,13 @@ $item-height: calc($content-height - ($content-height * .2));
     }
   }
 
-  &:focus {
+  &.attention {
     transition: none;
   }
 }
 
 .listItemLabel {
-  font-size: $label-font-size;
-  color: $label-color;
-  font-family: $label-font;
+  @extend .labelStyle;
   display: block;
   width: 1.66em;
 

@@ -12,6 +12,9 @@ import PageWrapper from '@/components/pages/page-wrapper'
 import Home from '@/components/pages/home'
 import WhoIAm from '@/components/pages/who-i-am'
 import WhereIveBeen from '@/components/pages/where-ive-been'
+import WhatIDo from '@/components/pages/what-i-do'
+
+import GetInTouch from '@/components/pages/get-in-touch'
 
 const useAppPages = (): Grid => {
   return useMemo(() => {
@@ -41,7 +44,7 @@ const useAppPages = (): Grid => {
           route: '/what-i-do',
           title: 'What I do',
           navImg: navWhatIDo,
-          ui: <PageWrapper color="green" columns={1} />,
+          ui: <WhatIDo />,
         },
         {
           route: '/things-i-love',
@@ -53,7 +56,7 @@ const useAppPages = (): Grid => {
           route: '/get-in-touch',
           title: 'Get in touch',
           navImg: navGetInTouch,
-          ui: <PageWrapper color="purple" columns={1} />,
+          ui: <GetInTouch />,
         },
       ],
     ]

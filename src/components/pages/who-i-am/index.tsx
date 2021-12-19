@@ -10,7 +10,7 @@ const WhoIAm = memo(() => {
   return (
     <PageWrapper columns={2}>
       <div>
-        <h1>Who I Am</h1>
+        <h1>Who I am</h1>
         <p>
           I am “Florida Man’s” mild-mannered, alter ego, situated in sunny
           Tallahassee with a wife and three kids. My career in frontend started

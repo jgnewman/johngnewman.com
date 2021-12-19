@@ -31,9 +31,7 @@
 }
 
 .navLink {
-  color: $label-color;
-  font-size: $label-font-size;
-  font-family: $label-font;
+  @extend .labelStyle;
 
   display: inline-flex;
   align-items: center;

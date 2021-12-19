@@ -1,0 +1,54 @@
+@import '@/globals';
+
+.repoLinkWrapper {
+  margin-bottom: 1rem;
+}
+
+.repoLink {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: $box-color;
+  transition: all .3s ease;
+
+  &:hover {
+    background: $box-highlight-primary;
+  }
+}
+
+.repoIconWrapper {
+  height: 84px;
+  position: relative;
+  overflow: hidden;
+}
+
+.repoIcon {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+
+  &.stretch {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+.repoTitle {
+  text-align: right;
+  font-weight: 700;
+  line-height: 1.4;
+  padding: 1.5rem 1rem 0;
+  color: $copy-color;
+  font-size: $small-font-size;
+}
+
+.repoDescrip {
+  text-align: right;
+  line-height: 1.4;
+  padding: 0 1rem 1rem;
+  color: $copy-color;
+  font-size: $small-font-size;
+}

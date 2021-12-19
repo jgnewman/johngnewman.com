@@ -16,6 +16,7 @@ $icon-color: #000000;
 $body-font: 'Open Sans', sans-serif;
 $headline-font: 'Source Serif Pro', serif;
 $label-font: 'Source Serif Pro', serif;
+$label-spacing: 0.5px;
 
 $base-font-size: 16px;
 $small-font-size: 81.25%; // 13px
@@ -53,6 +54,7 @@ $xlsize: 75em;
   labelColor: $label-color;
   labelFont: $label-font;
   labelFontSize: $label-font-size;
+  labelSpacing: $label-spacing;
   largeRounding: $large-rounding;
   largesize: $largesize;
   linkUnderlineColor: $link-underline-color;
@@ -79,4 +81,11 @@ $xlsize: 75em;
   @media (min-width: $xlsize) {
     @content;
   }
+}
+
+.labelStyle {
+  font-family: $label-font;
+  font-size: $label-font-size;
+  color: $label-color;
+  letter-spacing: $label-spacing;
 }

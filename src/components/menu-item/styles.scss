@@ -5,11 +5,9 @@
 }
 
 .menuLink {
+  @extend .labelStyle;
   position: relative;
   display: block;
-  font-size: $label-font-size;
-  font-family: $label-font;
-  color: $label-color;
   padding: 0.3em 1.5em;
   transition: background-color .3s ease;
 

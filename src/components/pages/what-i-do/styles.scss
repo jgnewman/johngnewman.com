@@ -1,0 +1,29 @@
+@import '@/globals';
+
+.repoLinks {
+  list-style: none;
+  margin: 0;
+  padding: 2rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  & > li {
+    width: 30%;
+    min-width: 162px;
+  }
+}
+
+.profileLink {
+  @extend .labelStyle;
+  display: inline-block;
+  margin-top: 1rem;
+
+  img {
+    margin-right: 0.75em;
+  }
+
+  & > * {
+    vertical-align: middle;
+  }
+}

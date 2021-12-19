@@ -33,6 +33,29 @@ p {
   margin-bottom: 0;
 }
 
+p a {
+  color: $copy-color;
+  background: $box-color;
+  border-bottom: 2px solid $link-underline-color;
+  position: relative;
+  white-space: nowrap;
+
+  &::after {
+    content: '';
+    transition: all .3s ease;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: $link-underline-color-hover;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
 button {
   -webkit-appearance: none;
   -moz-appearance: none;
