@@ -1,0 +1,54 @@
+@import '@/globals';
+
+.slideNav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.slideNavBtn {
+  @extend .labelStyle;
+
+  width: 100%;
+  background: $box-color;
+  transition: all .3s ease;
+  border: 2px solid transparent;
+
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  margin-bottom: .75rem;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background: $box-highlight-primary;
+    border-color: $graphic-color;
+    box-shadow: $base-shadow;
+  }
+
+  &.active {
+    background: $box-highlight-primary;
+
+    &:hover {
+      border-color: transparent;
+      box-shadow: none;
+      cursor: default;
+    }
+  }
+}
+
+.imgWrapper {
+  width: 32px;
+  height: 30px;
+  text-align: center;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    display: inline-block;
+  }
+}
