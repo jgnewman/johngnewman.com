@@ -1,1 +1,20 @@
 @import '@/globals';
+
+.slideContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 1.5rem;
+}
+
+.slideNavWrapper {
+  @include largesize {
+    width: 32%;
+  }
+}
+
+.slidesWrapper {
+  @include largesize {
+    width: 65%;
+  }
+}

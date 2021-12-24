@@ -1,0 +1,33 @@
+@import '@/globals';
+
+.slides {
+  transition: all .3s ease;
+  opacity: 1;
+
+  &.updating {
+    opacity: 0;
+  }
+}
+
+.slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.slideText {
+  @include largesize {
+    width: 55%;
+  }
+
+  h2 {
+    margin-top: 0;
+    line-height: 1;
+  }
+}
+
+.slideImg {
+  @include largesize {
+    width: 40%;
+  }
+}

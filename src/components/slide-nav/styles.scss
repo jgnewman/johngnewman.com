@@ -26,6 +26,7 @@
     background: $box-highlight-primary;
     border-color: $graphic-color;
     box-shadow: $base-shadow;
+    transform: scale(1.05);
   }
 
   &.active {
@@ -35,6 +36,7 @@
       border-color: transparent;
       box-shadow: none;
       cursor: default;
+      transform: scale(1);
     }
   }
 }
