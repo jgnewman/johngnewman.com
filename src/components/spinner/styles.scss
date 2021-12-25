@@ -1,0 +1,15 @@
+@import '@/globals';
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner {
+  border: 2px solid $box-color;
+  border-top: 2px solid $graphic-color;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  animation: spin 1s linear infinite;
+}
