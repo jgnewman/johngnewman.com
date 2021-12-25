@@ -15,6 +15,7 @@ import {
   slideNavBtn,
   active,
   imgWrapper,
+  textWrapper,
 } from './styles.scss'
 
 const SlideNav = () => {
@@ -34,10 +35,8 @@ const SlideNav = () => {
           className={cx(slideNavBtn, { [active]: sliderValue === 'code' })}
           onClick={setCode}
         >
-          <span className={imgWrapper}>
-            <img src={iconCode} aria-hidden />
-          </span>
-          Clean, simple code
+          <span className={imgWrapper}><img src={iconCode} aria-hidden /></span>
+          <span className={textWrapper}>Clean, simple code</span>
         </button>
       </li>
       <li>
@@ -45,10 +44,8 @@ const SlideNav = () => {
           className={cx(slideNavBtn, { [active]: sliderValue === 'paint' })}
           onClick={setPaint}
         >
-          <span className={imgWrapper}>
-            <img src={iconBrush} aria-hidden />
-          </span>
-          Watercolor paintings
+          <span className={imgWrapper}><img src={iconBrush} aria-hidden /></span>
+          <span className={textWrapper}>Watercolor paintings</span>
         </button>
       </li>
       <li>
@@ -56,10 +53,8 @@ const SlideNav = () => {
           className={cx(slideNavBtn, { [active]: sliderValue === 'myths' })}
           onClick={setMyths}
         >
-          <span className={imgWrapper}>
-            <img src={iconHammer} aria-hidden />
-          </span>
-          Northern mythology
+          <span className={imgWrapper}><img src={iconHammer} aria-hidden /></span>
+          <span className={textWrapper}>Northern mythology</span>
         </button>
       </li>
       <li>
@@ -67,10 +62,8 @@ const SlideNav = () => {
           className={cx(slideNavBtn, { [active]: sliderValue === 'music' })}
           onClick={setMusic}
         >
-          <span className={imgWrapper}>
-            <img src={iconMusic} aria-hidden />
-          </span>
-          Music of all kinds
+          <span className={imgWrapper}><img src={iconMusic} aria-hidden /></span>
+          <span className={textWrapper}>Music of all kinds</span>
         </button>
       </li>
     </ul>
